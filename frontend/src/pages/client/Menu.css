@@ -1,0 +1,152 @@
+/* Menu.css - Rediseño sin sidebar */
+
+.menu-page {
+  min-height: 100vh;
+  background-color: #F9F6EE;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CATEGORÍAS HORIZONTALES */
+.category-pills-wrapper {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  border-bottom: 1px solid #f0ece4;
+  scrollbar-width: none;
+}
+
+.category-pills-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill {
+  flex-shrink: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #e6ddd4;
+  background-color: white;
+  color: #4A2C2A;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-pill:hover {
+  border-color: #8B4513;
+  color: #8B4513;
+}
+
+.category-pill.active {
+  background-color: #8B4513;
+  border-color: #8B4513;
+  color: white;
+}
+
+/* SECCIÓN DE PRODUCTOS */
+.menu-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: #4A2C2A;
+  margin: 2rem 2rem 1.25rem;
+}
+
+.menu-main {
+  flex: 1;
+  padding: 0 2rem 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 12px rgba(74, 44, 42, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(74, 44, 42, 0.15);
+}
+
+.product-image {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+  gap: 0.75rem;
+}
+
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: #4A2C2A;
+  margin: 0;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #cb4335;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.product-desc {
+  color: #888;
+  font-size: 0.825rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 1rem 0;
+  min-height: 2.5rem;
+  line-height: 1.5;
+}
+
+.add-button-full {
+  width: 100%;
+  background-color: #cb4335;
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  box-shadow: 0 3px 8px rgba(203, 67, 53, 0.35);
+}
+
+.add-button-full:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}

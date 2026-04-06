@@ -1,0 +1,110 @@
+/* LoginPin.css */
+.pin-container {
+    min-height: 100vh;
+    background-color: #4A2C2A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.pin-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.875rem; /* text-3xl */
+    color: #F5F5DC;
+    margin-bottom: 2rem; /* mb-8 */
+    margin-top: 0;
+}
+
+.pin-display {
+    display: flex;
+    gap: 1rem; /* gap-4 */
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.pin-dot {
+    width: 3rem; /* w-12 */
+    height: 4rem; /* h-16 */
+    border-radius: 0.75rem; /* rounded-xl */
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+}
+
+.pin-dot-filled {
+    background-color: #D2691E;
+    border-color: white;
+    color: white;
+}
+
+.pin-dot-empty {
+    border-color: #6b7280; /* gray-500 */
+    color: #6b7280;
+}
+
+.numpad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem; /* gap-4 */
+}
+
+.numpad-btn {
+    width: 5rem; /* w-20 */
+    height: 5rem; /* h-20 */
+    background-color: rgba(255, 255, 255, 0.1); /* bg-white/10 */
+    color: #F5F5DC;
+    font-size: 1.875rem; /* text-3xl */
+    border-radius: 9999px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numpad-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* hover:bg-white/20 */
+}
+
+.numpad-btn:active {
+    transform: scale(0.95); /* active:scale-95 */
+}
+
+.numpad-btn-clear {
+    width: 5rem;
+    height: 5rem;
+    color: #f87171; /* text-red-400 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numpad-btn-enter {
+    width: 5rem;
+    height: 5rem;
+    background-color: #D2691E;
+    color: white;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 700;
+    border-radius: 9999px;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

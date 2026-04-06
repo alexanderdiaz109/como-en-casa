@@ -1,0 +1,57 @@
+/* CartStickyBar.css */
+.cart-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #8B4513;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 40;
+  font-family: 'Poppins', sans-serif;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.cart-info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cart-count {
+  font-size: 1rem;
+}
+
+.cart-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F5F5DC;
+}
+
+.cart-checkout-btn {
+  background-color: #F5F5DC;
+  color: #8B4513;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  font-size: 1rem;
+}
+
+.cart-checkout-btn:hover {
+  transform: scale(1.05);
+  background-color: white;
+}
